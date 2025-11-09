@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <link rel="icon" href="../Classera  Dark-Light Mode/Classera-Logo.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" href="styleTickets.css" /> -->
+  <link rel="stylesheet" href="styleAddTickets.css" />
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- chart JS -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+  <title>Classera | Dark-Light Mode</title>
+
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <header>
+      <div class="image-text">
+        <span class="imagee">
+          <img src="../Classera  Dark-Light Mode/Classera-Logo.png" alt="logo">
+        </span>
+        <div class="text header-text">
+          <span class="name">Classera</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a onClick="clickedButton()">
+              <i class='bx bx-home-alt icon'></i>
+              <span class="text nav-text">Dashboard</span>
+            </a>
+          </li>
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a onClick="myFunction()" class="active">
+                <i class='bx bx-check-square icon'></i>
+                <span class="text nav-text">Tickets</span>
+              </a>
+            </li>
+            <ul class="menu-links">
+              <li class="nav-link">
+                <a href="#">
+                  <i class='bx bx-user icon'></i>
+                  <span class="text nav-text">Customers</span>
+                </a>
+              </li>
+              <ul class="menu-links">
+                <li class="nav-link">
+                  <a href="#">
+                    <i class='bx bx-buildings icon'></i>
+                    <span class="text nav-text">Organizations</span>
+                  </a>
+                </li>
+                <ul class="menu-links">
+                  <li class="nav-link">
+                    <a href="#">
+                      <i class='bx bx-bar-chart-alt-2 icon'></i>
+                      <span class="text nav-text">Reporting</span>
+                    </a>
+                  </li>
+                  <ul class="menu-links">
+                    <li class="nav-link">
+                      <a href="#">
+                        <i class='bx bx-cog icon'></i>
+                        <span class="text nav-text">Settings</span>
+                      </a>
+                    </li>
+                  </ul>
+      </div>
+
+      <div class="buttom-content">
+        <li class="">
+          <a href="#">
+            <i class='bx bx-message-square-dots icon'></i>
+            <span class="text nav-text">Sera</span>
+          </a>
+        </li>
+
+        <li class="mode">
+          <div class="moon-sun">
+            <i class='bx bx-moon icon moon'></i>
+            <i class='bx bx-sun icon sun'></i>
+          </div>
+          <span class="text nav-text moon">Dark Mode</span>
+          <span class="text nav-text sun">Light Mode</span>
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+
+  <section class="header">
+    <div class="top">
+      <div class="search-box">
+        <i class='bx bx-search'></i>
+        <input type="text" placeholder="Search ...">
+      </div>
+      <div class="profile">
+        <i class='bx bx-envelope'></i>
+        <i class='bx bx-bell'></i>
+        <div class="divider"></div>
+        <img src="profilee.png" alt="">
+        <i class='bx bx-chevron-down'></i>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticket">
+    <div class="ticket-content">
+      <div class="overview">
+        <div class="ticket-icon">
+          <i class='bx bx-home-alt icon'></i>
+          <i class='bx bx-chevron-right'></i>
+          <p>Tickets</p>
+          <i class='bx bx-chevron-right'></i>
+          <p>Add ticket</p>
+        </div>
+        <div>
+          <p class="text">Add ticket</p>
+        </div>
+      </div>
+
+
+
+      <div class="divSubject">
+        <div class="box-title">
+          <p class="title">Subject</p>
+          <p class="subb-title">Title of ticket</p>
+        </div>
+        <div class="box">
+          <input type="text">
+        </div>
+      </div>
+      <div class="line1"></div>
+
+      <div class="divDiscription">
+        <div class="box-title">
+          <p class="title">Discription</p>
+          <p class="subb-title">Detailed description for the ticket</p>
+        </div>
+        <div class="box-textarea">
+          <textarea name="description" cols="62" rows="6"></textarea>
+        </div>
+      </div>
+      <div class="line2"></div>
+
+      <div class="divBrand">
+        <div class="box-title">
+          <p class="title">Brand</p>
+          <p class="subb-title">Product on which issue happen</p>
+        </div>
+        <div class="select-menu">
+          <div class="select-btn">
+            <span class="sBtn-text">Select Product </span>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+          <ul class="options">
+            <li class="option">
+              <img src="../Classera  Dark-Light Mode/brand/LMS.png" alt="LMS">
+              <span class="option-text">Learning Managment System</span>
+            </li>
+            <li class="option">
+              <img src="../Classera  Dark-Light Mode/brand/EDU.jpg" alt="EDU">
+              <span class="option-text">EDumall</span>
+            </li>
+            <li class="option">
+              <img src="../Classera  Dark-Light Mode/brand/cspaces.jpg" alt="cspaces">
+              <span class="option-text">Cspaces</span>
+            </li>
+            <li class="option">
+              <img src="../Classera  Dark-Light Mode/brand/C-Reality.png" alt="C-Reality">
+              <span class="option-text">Creality</span>
+            </li>
+            <li class="option">
+              <img src="../Classera  Dark-Light Mode/brand/Cinspire.png" alt="Cinspire">
+              <span class="option-text">Cinspire</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="line3"></div>
+
+      <div class="divModule">
+        <div class="box-title">
+          <p class="title">Module</p>
+          <p class="subb-title">Module on which issue happen</p>
+        </div>
+        <div class="select-menu2">
+          <div class="select-btn2">
+            <span class="sBtn-text2">Select Module </span>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+          <ul class="options2">
+            <li class="option2">
+              <span class="option-text2">Assesment Module</span>
+            </li>
+            <li class="option2">
+              <span class="option-text2">Exams Module</span>
+            </li>
+            <li class="option2">
+              <span class="option-text2">Grades Management Module</span>
+            </li>
+            <li class="option2">
+              <span class="option-text2">Scores Module</span>
+            </li>
+            <li class="option2">
+              <span class="option-text2">Useres Management Module</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="line4"></div>
+
+      <div class="buttons">
+        <button class="cancel">
+          <p>Cancel</p>
+        </button>
+        <button class="save">
+          <p class="save-text">Save</p>
+        </button>
+
+      </div>
+    </div>
+
+
+    <!-- Java Script -->
+    <!-- <script src="script.js"></script>
+    <script src="scriptt.js"></script> -->
+    <script src="scriptAddTicket.js"></script>
+</body>
+
+</html>

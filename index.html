@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <link rel="icon" href="../Classera  Dark-Light Mode/Classera-Logo.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- chart JS -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+  <title>Classera | Dark-Light Mode</title>
+
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <header>
+      <div class="image-text">
+        <span class="imagee">
+          <img src="../Classera  Dark-Light Mode/Classera-Logo.png" alt="logo">
+        </span>
+        <div class="text header-text">
+          <span class="name">Classera</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a onClick="clickedButton()" class="active">
+              <i class='bx bx-home-alt icon'></i>
+              <span class="text nav-text">Dashboard</span>
+            </a>
+          </li>
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a onClick="myFunction()">
+                <i class='bx bx-check-square icon'></i>
+                <span class="text nav-text">Tickets</span>
+              </a>
+            </li>
+            <ul class="menu-links">
+              <li class="nav-link">
+                <a href="#">
+                  <i class='bx bx-user icon'></i>
+                  <span class="text nav-text">Customers</span>
+                </a>
+              </li>
+              <ul class="menu-links">
+                <li class="nav-link">
+                  <a href="#">
+                    <i class='bx bx-buildings icon'></i>
+                    <span class="text nav-text">Organizations</span>
+                  </a>
+                </li>
+                <ul class="menu-links">
+                  <li class="nav-link">
+                    <a href="#">
+                      <i class='bx bx-bar-chart-alt-2 icon'></i>
+                      <span class="text nav-text">Reporting</span>
+                    </a>
+                  </li>
+                  <ul class="menu-links">
+                    <li class="nav-link">
+                      <a href="#">
+                        <i class='bx bx-cog icon'></i>
+                        <span class="text nav-text">Settings</span>
+                      </a>
+                    </li>
+                  </ul>
+      </div>
+
+      <div class="buttom-content">
+        <li class="">
+          <a href="#">
+            <i class='bx bx-message-square-dots icon'></i>
+            <span class="text nav-text">Sera</span>
+          </a>
+        </li>
+
+        <li class="mode">
+          <div class="moon-sun">
+            <i class='bx bx-moon icon moon'></i>
+            <i class='bx bx-sun icon sun'></i>
+          </div>
+          <span class="text nav-text moon">Dark Mode</span>
+          <span class="text nav-text sun">Light Mode</span>
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+
+  <section class="header">
+    <div class="top">
+      <div class="search-box">
+        <i class='bx bx-search'></i>
+        <input type="text" placeholder="Search ...">
+      </div>
+      <div class="profile">
+        <i class='bx bx-envelope'></i>
+        <i class='bx bx-bell'></i>
+        <div class="divider"></div>
+        <img src="profilee.png" alt="">
+        <i class='bx bx-chevron-down'></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard -->
+   <div class="contents">
+  <div class="home-content">
+    <div class="total-boxes">
+      <div class="box">
+        <div class="left-side">
+          <div class="box-topic">Total Tickets</div>
+          <div class="iicon">
+            <i class='bx bxs-message-square-check'></i>
+          </div>
+          <div class="topic">
+            <div class="number">17,825</div>
+            <div class="indicator">
+              <i class='bx bx-up-arrow-alt'></i>
+              <p class="present">7.2%</p>
+              <p class="text"> than last day</p>
+            </div>
+          </div>
+          <div class="arrow">
+            <i class='bx bx-chevron-right '></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-content2">
+    <div class="total-boxes">
+      <div class="box">
+        <div class="left-side">
+          <div class="box-topic">Total Interactions</div>
+          <div class="iicon">
+            <i class='bx bxs-chat'></i>
+          </div>
+          <div class="topic">
+            <div class="number">785,021</div>
+            <div class="indicator">
+              <i class='bx bx-up-arrow-alt'></i>
+              <p class="present">12.2%</p>
+              <p class="text"> than last day</p>
+            </div>
+          </div>
+          <div class="arrow">
+            <i class='bx bx-chevron-right '></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="home-content3">
+    <div class="total-boxes">
+      <div class="box">
+        <div class="left-side">
+          <div class="box-topic">Total Users</div>
+          <div class="iicon">
+            <i class='bx bxs-user'></i>
+          </div>
+          <div class="topic">
+            <div class="number">8,482</div>
+            <div class="indicator">
+              <i class='bx bx-down-arrow-alt'></i>
+              <p class="present">10.2%</p>
+              <p class="text"> than last day</p>
+            </div>
+          </div>
+          <div class="arrow">
+            <i class='bx bx-chevron-right '></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="home-content4">
+    <div class="total-boxes">
+      <div class="box">
+        <div class="left-side">
+          <div class="box-topic">Total Groups</div>
+          <div class="iicon">
+            <i class='bx bxs-group'></i>
+          </div>
+          <div class="topic">
+            <div class="number">1,420</div>
+            <div class="indicator">
+              <i class='bx bx-up-arrow-alt'></i>
+              <p class="present">3.2%</p>
+              <p class="text"> than last day</p>
+            </div>
+          </div>
+          <div class="arrow">
+            <i class='bx bx-chevron-right '></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="area-chart">
+    <div class="box">
+      <div id="chart">
+      </div>
+    </div>
+  </div>
+
+  <div class="rating-content">
+    <div class="box">
+      <div class="left-side">
+        <div class="box-topic">Overall Rating</div>
+        <div class="topic">
+          <div class="number">4.8 <span class="present">/5</spn>
+          </div>
+          <div class="stars">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+          </div>
+        </div>
+        <div class="rating">
+          <p class="text"> Rating Ratio</p>
+          <div class="range-container">
+            <span class="range1">33%</span>
+            <input type="range" value="33" min="0" max="100" class="custom-range" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bar-chart">
+    <div class="box">
+      <div id="chart2">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="pie-chart">
+    <div class="box">
+      <div id="chart3"></div>
+      <script>
+        var options = {
+          series: [40, 20, 15, 25],
+          chart: {
+            width: 260,
+            type: 'donut',
+            foreColor: "var(--text-color)",
+            offsetX: 10,
+
+          },
+          title: {
+            text: 'Attachments Details',
+            style: {
+              fontSize: '13px',
+              fontWeight: 600,
+              fontFamily: 'Poppins'
+            },
+            // offsetY: -5,
+
+          },
+          stroke: {
+            width: 1,
+            colors: ["var(--sidebar-color)"],
+            transition: 'var(--tran-05)',
+
+
+          },
+          dataLabels: {
+            enabled: false
+          },
+          legend: {
+            show: false
+
+          },
+          colors: ['#26c6da', '#ffa726', '#ef5350', '#2196f3'],
+
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart3"), options);
+        chart.render();
+
+      </script>
+
+
+      <div class="menu">
+        <ul class="menu-links">
+          <li class="nav-link">
+            <div class="content2">
+              <div class="total-boxes">
+                <div class="boxx">
+                  <div class="left-side">
+                    <div class="iicon1">
+                      <i class='bx bxs-file-doc'></i>
+                    </div>
+                    <div class="indicator">
+                      <p class="present">Documents Files</p>
+                      <p class="text"> 1,225</p>
+                    </div>
+                    <div class="arroww">
+                      <p class="text"> 1.3GB</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <ul class="menu-links">
+            <li class="nav-link">
+              <div class="content2">
+                <div class="total-boxes">
+                  <div class="boxx">
+                    <div class="left-side">
+                      <div class="iicon2">
+                        <i class='bx bxs-file-image'></i>
+                      </div>
+                      <div class="indicator">
+                        <p class="present">Images Files</p>
+                        <p class="text"> 1,849</p>
+                      </div>
+                      <div class="arroww">
+                        <p> 7.3GB</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            </li>
+            <ul class="menu-links">
+              <li class="nav-link">
+                <div class="content3">
+                  <div class="total-boxes">
+                    <div class="boxx">
+                      <div class="left-side">
+                        <div class="iicon3">
+                          <i class='bx bxs-user-voice'></i>
+                        </div>
+                        <div class="indicator">
+                          <p class="present">Voices Files</p>
+                          <p class="text"> 1,005</p>
+                        </div>
+                        <div class="arroww">
+                          <p> 4.1GB</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <ul class="menu-links">
+                <li class="nav-link">
+                  <div class="content4">
+                    <div class="total-boxes">
+                      <div class="boxx">
+                        <div class="left-side">
+                          <div class="iicon4">
+                            <i class='bx bxs-videos'></i>
+                          </div>
+                          <div class="indicator">
+                            <p class="present">Vidoes Files</p>
+                            <p class="text"> 723</p>
+                          </div>
+                          <div class="arroww">
+                            <p> 1.3GB</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+      </div>
+    </div>
+</div>
+    <!-- Java Script -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

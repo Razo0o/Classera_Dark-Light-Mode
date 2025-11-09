@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <link rel="icon" href="../Classera  Dark-Light Mode/Classera-Logo.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styleTickets.css" />
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- chart JS -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+  <title>Classera | Dark-Light Mode</title>
+
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <header>
+      <div class="image-text">
+        <span class="imagee">
+          <img src="../Classera  Dark-Light Mode/Classera-Logo.png" alt="logo">
+        </span>
+        <div class="text header-text">
+          <span class="name">Classera</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a onClick="clickedButton()">
+              <i class='bx bx-home-alt icon'></i>
+              <span class="text nav-text">Dashboard</span>
+            </a>
+          </li>
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a onClick="myFunction()" class="active">
+                <i class='bx bx-check-square icon'></i>
+                <span class="text nav-text">Tickets</span>
+              </a>
+            </li>
+            <ul class="menu-links">
+              <li class="nav-link">
+                <a href="#">
+                  <i class='bx bx-user icon'></i>
+                  <span class="text nav-text">Customers</span>
+                </a>
+              </li>
+              <ul class="menu-links">
+                <li class="nav-link">
+                  <a href="#">
+                    <i class='bx bx-buildings icon'></i>
+                    <span class="text nav-text">Organizations</span>
+                  </a>
+                </li>
+                <ul class="menu-links">
+                  <li class="nav-link">
+                    <a href="#">
+                      <i class='bx bx-bar-chart-alt-2 icon'></i>
+                      <span class="text nav-text">Reporting</span>
+                    </a>
+                  </li>
+                  <ul class="menu-links">
+                    <li class="nav-link">
+                      <a href="#">
+                        <i class='bx bx-cog icon'></i>
+                        <span class="text nav-text">Settings</span>
+                      </a>
+                    </li>
+                  </ul>
+      </div>
+
+      <div class="buttom-content">
+        <li class="">
+          <a href="#">
+            <i class='bx bx-message-square-dots icon'></i>
+            <span class="text nav-text">Sera</span>
+          </a>
+        </li>
+
+        <li class="mode">
+          <div class="moon-sun">
+            <i class='bx bx-moon icon moon'></i>
+            <i class='bx bx-sun icon sun'></i>
+          </div>
+          <span class="text nav-text moon">Dark Mode</span>
+          <span class="text nav-text sun">Light Mode</span>
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+
+  <section class="header">
+    <div class="top">
+      <div class="search-box">
+        <i class='bx bx-search'></i>
+        <input type="text" placeholder="Search ...">
+      </div>
+      <div class="profile">
+        <i class='bx bx-envelope'></i>
+        <i class='bx bx-bell'></i>
+        <div class="divider"></div>
+        <img src="profilee.png" alt="">
+        <i class='bx bx-chevron-down'></i>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticket">
+    <div class="ticket-content">
+      <div class="overview">
+        <div class="ticket-icon">
+          <i class='bx bx-home-alt icon'></i>
+          <i class='bx bx-chevron-right'></i>
+          <p>Tickets</p>
+        </div>
+        <div >
+          <p class="text">Tickets</p>
+        </div>
+        <div class="buttons">
+          <button class="export">
+            <i class='bx bx-cloud-upload'></i>
+            <p>Export</p>
+          </button>
+          <button class="addTicke" onClick="addTicket()">
+            <i class='bx bx-plus'></i>
+            <p>Add Ticket</p>
+          </button>
+        </div>
+      </div>
+
+      <div class="topnav">
+        <a class="active" href="#">Overview</a>
+        <a href="#">Devlopment</a>
+        <a href="#">New Feature</a>
+        <a href="#">FAQ</a>
+      </div>
+
+      <div class="cords-container">
+
+        <div class="card total1">
+          <div class="textt1">
+            <span>Open</span>
+          </div>
+          <div class="numberr1">
+            <span>7</span>
+          </div>
+          <div class="wave"></div>
+        </div>
+
+        <div class="card total2">
+          <span class="textt2">In Progress</span>
+          <span class="numberr2">15</span>
+          <div class="wave2"></div>
+        </div>
+
+        <div class="card total3">
+          <span class="textt3">Pending</span>
+          <span class="numberr3">44</span>
+          <div class="wave3"></div>
+        </div>
+
+        <div class="card total4">
+          <span class="textt4">Resolved</span>
+          <span class="numberr4">4205</span>
+          <div class="wave4"></div>
+        </div>
+
+      </div>
+      <div class="box">
+        <button class="filter">
+          <i class='bx bx-filter'></i>
+          <p>Filters</p>
+        </button>
+        <div class="search-box">
+          <i class='bx bx-search'></i>
+          <input type="text" placeholder="Search in table...">
+        </div>
+      </div>
+
+    </div>
+    <div class="table-wrapper">
+    <table>
+      <tr class="titel-table">
+        <th>ID</th>
+        <th>Brand</th>
+        <th>Requester</th>
+        <th>Assignee</th>
+        <th>Status</th>
+        <th>Interactions</th>
+        <th>Responsiveness</th>
+        <th>Date</th>
+      </tr>
+
+      <tr>
+        <td class="title-ID">
+          <p>225125</p>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/brand/LMS.png" alt="LMS" class="brandImg">
+            <div class="info">
+              <p class="title-brand">LMS</p>
+              <p class="sub-title-brand">Reports</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/Moh. Alashmawi.jpg" alt="Moh. Alashmawi" class="image">
+            <div class="info">
+              <p class="title">Mohammad Alashmawi</p>
+              <p class="sub-title">CTO at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/HuthaifaYousef.jpg" alt="Huthaifa Yousef" class="image">
+            <div class="info">
+              <p class="title">Huthaifa Yousef</p>
+              <p class="sub-title">Support team at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="status status-in-progress ">
+            <i class='bx bxs-circle'></i>
+            <p class="blue">In Progress</p>
+          </div>
+        </td>
+        <td>
+          <div class="interaction">
+            <img src="../Classera  Dark-Light Mode/person/HuthaifaYousef.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/Moh. Alashmawi.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/Moh. Alashmawi.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/Moh. Alashmawi.jpg" alt="" class="image">
+            <div class="more">
+              <p>+3</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="progress-container">
+            <div class="progress-bar"></div>
+            <p class="progress-text">30%</p>
+          </div>
+
+        </td>
+        <td class="date">
+          <p>Feb 22,2022</p>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td class="title-ID">
+          <p>225124</p>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/brand/Cpay.png" alt="cpay" class="brandImgC">
+            <div class="info">
+              <p class="title-brand">Cpay</p>
+              <p class="sub-title-brand">Payment Module</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/HuthaifaYousef.jpg" alt="Huthaifa Yousef" class="image">
+            <div class="info">
+              <p class="title">Huthaifa Yousef</p>
+              <p class="sub-title">Support team at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/OmarAlhariri.jpg" alt="OmarAlhariri" class="image">
+            <div class="info">
+              <p class="title">Omar Alhariri</p>
+              <p class="sub-title">Cpay team at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="status status-pending div">
+            <i class='bx bxs-circle'></i>
+            <p> Pending</p>
+          </div>
+        </td>
+
+        <td>
+          <div class="interaction">
+            <img src="../Classera  Dark-Light Mode/person/OmarAlhariri.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/Moh. Alashmawi.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/YarubWahsheh.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/HuthaifaYousef.jpg" alt="" class="image">
+            <div class="more">
+              <p>+1</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="progress-container">
+            <div class="progress-bar95"></div>
+            <p class="progress-text">95%</p>
+          </div>
+
+        </td>
+        <td class="date">
+          <p>Feb 21,2022</p>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class="title-ID">
+          <p>225125</p>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/brand/cspaces.jpg" alt="LMS" class="brandImg">
+            <div class="info">
+              <p class="title-brand">LMS</p>
+              <p class="sub-title-brand">Courses Module</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/YarubWahsheh.jpg" alt="YarubWahsheh" class="image">
+            <div class="info">
+              <p class="title">Yarub Ahmad</p>
+              <p class="sub-title">Support team at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/MohammadGhonaimat.jpg" alt="Mohammad Ghonaimat" class="image">
+            <div class="info">
+              <p class="title">Mohammad Ghonaimat</p>
+              <p class="sub-title">DevOps team at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="status status-resolved div">
+            <i class='bx bxs-circle'></i>
+            <p>Resolved</p>
+          </div>
+        </td>
+        <td>
+          <div class="interaction">
+            <img src="../Classera  Dark-Light Mode/person/MohammadGhonaimat.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/MohammadGhonaimat.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/HuthaifaYousef.jpg" alt="" class="image">
+          </div>
+        </td>
+        <td>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar90"></div>
+              <p class="progress-text">90%</p>
+            </div>
+          </div>
+        </td>
+        <td class="date">
+          <p>Feb 22,2022</p>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class="title-ID">
+          <p>225125</p>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/brand/C-Reality.png" alt="Reality" class="brandImg">
+            <div class="info">
+              <p class="title-brand">Creality</p>
+              <p class="sub-title-brand">Activity Module</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/MohammadHasan.png" alt="MohammadHasan" class="image">
+            <div class="info">
+              <p class="title">Mohammad Hasan</p>
+              <p class="sub-title">Marketing team at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/MahmoudObaid.jpg" alt="MahmoudObaid" class="image">
+            <div class="info">
+              <p class="title">Mahmoud Obaid</p>
+              <p class="sub-title">Creality team at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="status status-resolved div">
+            <i class='bx bxs-circle'></i>
+            <p>Resolved</p>
+          </div>
+        </td>
+        <td>
+          <div class="interaction">
+            <img src="../Classera  Dark-Light Mode/person/MahmoudObaid.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/MohammadHasan.png" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/MahmoudObaid.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/Moh. Alashmawi.jpg" alt="" class="image">
+            <div class="more">
+              <p>+5</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar82"></div>
+              <p class="progress-text">82%</p>
+            </div>
+          </div>
+        </td>
+        <td class="date">
+          <p>Feb 22,2022</p>
+        </td>
+      </tr>
+      <tr>
+
+
+        <td class="title-ID">
+          <p>225125</p>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/brand/LMS.png" alt="LMS" class="brandImg">
+            <div class="info">
+              <p class="title-brand">LMS</p>
+              <p class="sub-title-brand">Payment Module</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/Moh. Alashmawi.jpg" alt="Moh. Alashmawi" class="image">
+            <div class="info">
+              <p class="title">Mohammad Alashmawi</p>
+              <p class="sub-title">CTO at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/MohammadTemraz.jpg" alt="Mohammad Ghonaimat" class="image">
+            <div class="info">
+              <p class="title">Mohammad Ghonaimat</p>
+              <p class="sub-title">Smile team at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="status status-pending div">
+            <i class='bx bxs-circle'></i>
+            <p> Pending</p>
+          </div>
+        </td>
+        <td>
+          <div class="interaction">
+            <img src="../Classera  Dark-Light Mode/person/MohammadTemraz.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/MohammadGhonaimat.jpg" alt="" class="image">
+          </div>
+        </td>
+        <td>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar90"></div>
+              <p class="progress-text">90%</p>
+            </div>
+          </div>
+        </td>
+        <td class="date">
+          <p>Feb 22,2022</p>
+        </td>
+      </tr>
+      <tr>
+
+
+
+        <td class="title-ID">
+          <p>225125</p>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/brand/EDU.jpg" alt="EDU" class="brandImg">
+            <div class="info">
+              <p class="title-brand">Edumalls</p>
+              <p class="sub-title-brand">Order Module</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/yazanBasheer.jpg" alt="yazanBasheer" class="image">
+            <div class="info">
+              <p class="title">Yazan Basheer</p>
+              <p class="sub-title">Sales team at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/YarubWahsheh.jpg" alt="YarubWahsheh" class="image">
+            <div class="info">
+              <p class="title">Yarub Ahmad</p>
+              <p class="sub-title">Support team at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="status status-open div">
+            <i class='bx bxs-circle'></i>
+            <p>Open</p>
+          </div>
+        </td>
+        <td>
+          <div class="interaction">
+            <img src="../Classera  Dark-Light Mode/person/MohammadHasan.png" alt="" class="image">
+          </div>
+        </td>
+        <td>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar15"></div>
+              <p class="progress-text">15%</p>
+            </div>
+          </div>
+        </td>
+        <td class="date">
+          <p>Feb 22,2022</p>
+        </td>
+      </tr>
+      <tr>
+
+        <td class="title-ID">
+          <p>225125</p>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/brand/LMS.png" alt="LMS" class="brandImg">
+            <div class="info">
+              <p class="title-brand">LMS</p>
+              <p class="sub-title-brand">Grades Module</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/AbdullahAbutouq.jpg" alt="AbdullahAbutouq" class="image">
+            <div class="info">
+              <p class="title">Abdullah Abutouq</p>
+              <p class="sub-title">Services team at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="div">
+            <img src="../Classera  Dark-Light Mode/person/MohammadSmairat.jpg" alt="MohammadSmairat" class="image">
+            <div class="info">
+              <p class="title">Mohammad Smairat</p>
+              <p class="sub-title">Support team at Classera</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="status status-resolved div">
+            <i class='bx bxs-circle'></i>
+            <p>Resolved</p>
+          </div>
+        </td>
+        <td>
+          <div class="interaction">
+            <img src="../Classera  Dark-Light Mode/person/MohammadSmairat.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/AbdullahAbutouq.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/MohammadSmairat.jpg" alt="" class="image">
+            <img src="../Classera  Dark-Light Mode/person/YarubWahsheh.jpg" alt="" class="image">
+            <div class="more">
+              <p>+2</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar70"></div>
+              <p class="progress-text">70%</p>
+            </div>
+          </div>
+        </td>
+        <td class="date">
+          <p>Feb 22,2022</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="8">
+          <div class="pagination-bar">
+            <button class="pagination-button">Previous</button>
+            <span class="page-info">Page 1 of 50</span>
+            <button class="pagination-button">Next</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  </div>
+
+  <!-- Java Script -->
+  <!-- <script src="script.js"></script> -->
+  <script src="scriptTicket.js"></script>
+  <script src="scriptAddTicket.js"></script>
+
+
+</body>
+
+</html>
